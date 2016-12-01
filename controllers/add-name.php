@@ -1,4 +1,10 @@
 <?php
 
-var_dump('You typed '.$_POST['name']);
+$app['database']->insert('users', [
+  //$parameters that are passed
+  'name' => $_POST['name']
+
+]);
+
+header('Location: /');
  ?>
